@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP - Interface Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+
+    <header class="bg-gray-900 text-white p-4 shadow-md">
+        <h1 class="text-2xl font-bold text-center">Império ERP - Módulo de Produtos</h1>
+        <div class="mt-4 flex justify-center">
+    <input type="text" oninput="buscarProdutos(this.value)" placeholder="Buscar produtos..." class="w-full md:w-1/2 px-4 py-2 rounded text-gray-900 border-none focus:ring-2 focus:ring-blue-500 outline-none shadow-inner">
+</div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4 flex flex-col md:flex-row gap-8">
+        
+        <section class="w-full md:w-2/3">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Nossa Prateleira</h2>
+            <div class="flex gap-4 mb-6 overflow-x-auto pb-2">
+    <button onclick="filtrarCategoria('Todas')" class="px-4 py-2 bg-gray-800 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors">Todas</button>
+    <button onclick="filtrarCategoria('Eletrônicos')" class="px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-full font-semibold hover:bg-gray-100 transition-colors">Eletrônicos</button>
+    <button onclick="filtrarCategoria('Móveis')" class="px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-full font-semibold hover:bg-gray-100 transition-colors">Móveis</button>
+</div>
+            <div id="vitrine" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+
+        <aside class="w-full md:w-1/3 bg-white p-6 rounded-xl shadow-lg h-fit border border-gray-200">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Seu Carrinho</h2>
+            <div id="carrinho-lateral" class="flex flex-col">
+                <p class="text-gray-500 italic">O carrinho está vazio.</p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t flex justify-between items-center">
+                <span class="font-bold text-lg">Total:</span>
+                <span id="valor-total" class="font-bold text-xl text-green-600">R$ 0</span>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
