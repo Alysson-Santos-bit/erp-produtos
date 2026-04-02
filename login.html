@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Império ERP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center font-sans">
+
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Império ERP</h1>
+        <p class="text-center text-gray-500 mb-8">Acesso Restrito</p>
+
+        <div class="flex flex-col gap-4">
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">E-mail</label>
+                <input type="email" id="email-input" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="alysson@erp.com">
+            </div>
+            
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">Senha</label>
+                <input type="password" id="senha-input" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="••••••••">
+            </div>
+
+            <button id="btn-entrar" class="mt-4 w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Entrar no Sistema
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>
