@@ -29,8 +29,8 @@ botaoEntrar.addEventListener('click', function() {
 
     signInWithEmailAndPassword(auth, emailDigitado, senhaDigitada)
       .then((userCredential) => {
-        alert("Acesso Autorizado! Bem-vindo ao ERP.");
-        window.location.href = "index.html"; 
+        alert("Acesso Autorizado! Bem-vindo ao ERP.");        
+        window.location.replace("index.html"); 
       })
       .catch((error) => {
         alert("Acesso Negado: E-mail ou senha incorretos.");
